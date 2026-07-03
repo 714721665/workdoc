@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>网络IP配置</h1>
+        <h2>日期：26.01.28</h2>
+        <p>在设备的系统安装完毕后一般需要进行网络的配置</p>
+        <p>本次配置中需要配置两张网卡和管理地址</p>
+        <p>打开终端，可以使用ip a命令查看所有的端口及地址</p>
+        <p>在终端输入nmtui进入IP设置的图形化界面本次的两张网卡分别需要设置绑定14</p>
+        <p>添加bonding命名为bond1其中添加enp125s0f0和enp125s0f1，其模式为主备模式地址设置为静态按规划进行设置</p>
+        <p>添加bonding命名为bond4其中添加enp1s0f0和enps0f1，其模式为802.3ad地址配置也为静态地址按规划填写网关都为254</p>
+        <p>在添加后可以点入其中查看如果添加成功就可以看到网口的MAC地址，如果没有看到MAC地址则为配置错误，请重新删除后查看</p>
+        <p>在设置完毕后需要重启网络服务使用命令systemctl restart network重启完毕后配置成功</p>
+        <p>网卡配置完毕后进入ibmc进行管理地址更改，同理客户需求更改。更改完毕后需进行重新登录检查连接性</p>
+    </div>
+    <div>
+        <a href="../tech.html">返回上级</a>
+    </div>
+</body>
+</html>

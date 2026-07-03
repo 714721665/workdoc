@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>华为虚拟化部署实施</h1>
+        <h2>CNA节点安装</h2>
+        <p>在虚拟化实施前或实施中需要做好规划并进行相关记录！</p>
+        <p>首先需要确定管理口地址，使用本地网络连接或者网线连接。</p>
+        <p>连接设备后进行上电操作，按需求配置raid（需要确定硬盘状态为unconfigured good，如果IBMC中无法设置则考虑bios中进行）</p>
+        <p>使用bios挂载CNA的镜像，挂载完毕后安装管理首节点（本部分同系统安装），并配置相关的IP地址和相关密码</p>
+        <p>安装完毕后使用gandalf账号登录CNA节点并使用cnaInit进行初始化</p>
+        <p>使用WinSCP软件进将安装工具传输到galax8000下</p>
+        <p>传输完毕后使用putty远程登录工具登录gandalf并使用unzip命令解压后使用sh install安装</p>
+        <h2>VRM节点安装</h2>
+        <p>使用网页登录到首节点地址的8080端口处进行自定义的VRM节点安装（需要用https登录，默认用户admin密码为IaaS@PORTAL-CLOUD8）</p>
+        <p>在本部分中需要上传VRM镜像及SIA安装包进行安装，安装过程中需要配置VRM参数及密码</p>
+        <p>安装完毕后登录到管理界面即可进行虚拟机创建</p>
+    </div>
+    <div id="return">
+        <a href="../tech.html">返回上级</a>
+    </div>
+</body>
+</html>

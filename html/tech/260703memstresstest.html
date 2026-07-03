@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>内存压力测试</h1>
+        <p>内存压力测试需要先查看cpu型号并查看最大可运行内存频率，确保内存可运行在最大频率</p>
+        <p>完成检查后，安装linux系统，使用yum下载stress-ng组件</p>
+        <p>开机声音过吵可以在ibmc保持下电使用ipmcset -d fanmode -v 1 100000000和ipmcset -d fanlevel -v 50手动将风扇速度调整为50%</p>
+        <p>安装完内存后确保无告警</p>
+        <p>如使用网卡无线IP连接可使用远程登陆工具登录，如直连可以使用虚拟控制台登录</p>
+        <p>进入系统后可以使用free -m指令查看内存大小</p>
+        <p>查看后使用（内存压力测试 5分钟，占用 90% 内存，4 线程）：sudo stress-ng --vm 4 --vm-bytes 90% --timeout 300s进行测试</p>
+        <p>按需要进行修改上述指令，并完成测试。</p>
+    </div>
+    <div>
+        <a href="../tech.html">返回上级</a>
+    </div>
+</body>
+</html>
