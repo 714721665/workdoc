@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>热启动情况下更换系统盘</h1>
+        <p>先更换托架后插入3块盘，其中两块盘做raid1。进系统后安装相应系统（本次选择openeuler作为测试系统）</p>
+        <p>其中硬盘做raid前需要设置为unconfiged good</p>
+        <p>进入系统后拔下一块已经做好raid的硬盘，在同一位置插入一块已经设置完unconfige good的硬盘</p>
+        <p>系统内显示degrade，IBMC中新插入硬盘状态为rebuild，当rebuild完成后会转换为和另一块盘相同的ONLINE状态</p>
+    </div>
+    <div>
+        <h1>后续实施情况及问题</h1>
+        <p>存在新盘插入后仍显示旧盘问题，可能为读取了旧盘信息需要等重构完毕后再次查看信息，硬盘通电时间等重构后一段时间后就会更改显示</p>
+    </div>
+    <div>
+        <a href="../tech.html">返回上级</a>
+    </div>
+</body>
+</html>
