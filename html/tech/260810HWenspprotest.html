@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>华为ensp pro安装测试</h1>
+        <p>本文档记录本人下载使用ensp pro的方法</p>
+        <h2>下载ensp pro和QEMU</h2>
+        <p>前往华为官网下载ensp pro，前往QEMU官网下载QEMU，地址为"https://www.qemu.org/download/"(此地址为当时下载地址请在下载前仔细甄别是否为官方地址)</p>
+        <h2>安装QEMU</h2>
+        <p>点击安装QEMU软件，并按流程进行</p>
+        <h2>开启ensp pro</h2>
+        <p>在QEMU的文件夹下使用如下命令打开ensp pro</p>
+        <p>@echo off
+            chcp 65001
+            cd /d "E:\qemu"
+            qemu-system-x86_64 ^
+            -L "E:\qemu\share" ^
+            -hda "C:\ICSLite_download\eNSP Pro V100R003C10SPC101\eNSP-Pro_V100R003C10SPC101_Software_X8664_release.qcow2" ^
+            -m 16G ^
+            -smp 4,cores=4,threads=1,sockets=1 ^
+            -cpu host ^
+            -machine q35,accel=whpx ^
+            -netdev user,id=net0,hostfwd=tcp::8443-:8443,hostfwd=tcp::8090-:8090 ^
+            -device virtio-net-pci,netdev=net0 ^
+            -display gtk,gl=on
+            pause</p>
+        <p>需要注意路径和命令窗位置，以及内存分配量，是否有显存加速等问题，等待一段时间后即可从网页https://localhost:8443/进入ensp pro中</p>
+    </div>
+    <div id="return">
+        <a href="../tech.html">返回上级</a>
+    </div>
+</body>
+</html>

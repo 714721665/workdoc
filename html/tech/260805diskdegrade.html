@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>硬盘固件降级</h1>
+        <p>本文档记录如何将华为硬盘进行固件降级</p>
+        <h2>安装任意linux系统</h2>
+        <p>按照步骤在服务器上安装任意linux系统，无其他特殊要求</p>
+        <h2>下载挂载华为diskkit</h2>
+        <p>下载华为diskkit后本地挂载到linux系统钟并将其转移到任意目录下(图形界面可以复制黏贴，命令窗口使用cp命令即可)</p>
+        <h2>解压安装文件</h2>
+        <p>使用tar -xvf解压缩安装包，并使用rpm -i安装diskkit</p>
+        <h2>下载固件包</h2>
+        <p>查询下载硬盘相关的固件包(升级或者降级)，将.bin文件挂载到diskkit文件夹目录下即可</p>
+        <h2>变更固件版本</h2>
+        <p>使用lsblk命令查看需要更新版本的固件的磁盘位置，然后使用diskkit updatefw -d sdx -f <文件名>,并确认即可升级完毕</p>
+        <h2>检查固件版本</h2>
+        <p>可以使用diskkit updatefw命令查看也可以进入bmc中查看固件版本</p>
+    </div>
+    <div id="return">
+        <a href="../tech.html">返回上级</a>
+    </div>
+</body>
+</html>
